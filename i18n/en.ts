@@ -1,6 +1,6 @@
 export const en = {
     header: {
-        brand: "Nidus Solutions",
+        brand: "Nidus Digital Solutions",
         languageEN: "English",
         languagePT: "Português",
         services: "Services",
@@ -19,7 +19,7 @@ export const en = {
         copyright: "Copyright © 2025 Nidus Solutions. All rights reserved.",
     },
     home: {
-        title: "Welcome to Nidus Solutions",
+        title: "Welcome to NIDUS",
         description: "We are a technology company specialized in web development and design.",
     },
     aboutUs: {

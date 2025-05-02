@@ -17,6 +17,10 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Nidus",
     description: "Technology company specializing in web development and design.",
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {

@@ -1,6 +1,6 @@
 export const pt = {
     header: {
-        brand: "Nidus Soluções",
+        brand: "Nidus Soluções Digitais",
         languageEN: "English",
         languagePT: "Português",
         services: "Serviços",
@@ -8,7 +8,7 @@ export const pt = {
         contact: "Contato",
     },
     page: {
-        welcome: "Bem-vindo ao Nidus",
+        welcome: "Bem-vindo ao NIDUS",
         description: "Somos uma empresa de tecnologia especializada em desenvolvimento e design web.",
         warning: "O site está passando por reformas. Para mais informações ou orçamentos, entre em contato.",
         contact: "Entre em contato",
@@ -19,7 +19,7 @@ export const pt = {
         copyright: "Copyright © 2025 Nidus Soluções. Todos os direitos reservados.",
     },
     home: {
-        title: "Bem-vindo à Nidus Soluções",
+        title: "Bem-vindo à NIDUS",
         description: "Somos uma empresa de tecnologia especializada em desenvolvimento e design web.",
     },
     aboutUs: {

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Add responsive improvements and enhance language/menu handling&#10;&#10;Improved responsive styling across multiple sections by introducing breakpoints for paddings, margins, and font sizes. Enhanced header functionality with outside click handling for menus, ensuring better user experience. Updated localization and corrected texts to maintain consistency across languages.">
+    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Add ContactSection with form and animations&#10;&#10;Introduced a new ContactSection component featuring a form with animations to collect user inquiries. Integrated localization for both English and Portuguese, and added dependencies for form handling. Updated the app structure to include the new section and ensured responsive design compatibility.">
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/pt.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/jg/Documentos/nidus/nidus-site/app",
+    "last_opened_file_path": "C:/Users/joao.gustavo/Documents/GitHub/nidus/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,13 +74,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joao.gustavo\Documents\GitHub\nidus\public" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joao.gustavo\Documents\GitHub\nidus\public" />
+      <recent name="C:\Users\joao.gustavo\Documents\GitHub\nidus\app" />
       <recent name="C:\Users\joao.gustavo\Documents\GitHub\nidus\public\founders" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/messages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -121,7 +122,7 @@
       <workItem from="1746159045727" duration="333000" />
       <workItem from="1746198177055" duration="371000" />
       <workItem from="1746212506814" duration="6017000" />
-      <workItem from="1746219656419" duration="2980000" />
+      <workItem from="1746219656419" duration="3617000" />
     </task>
     <task id="LOCAL-00001" summary="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`.">
       <option name="closed" value="true" />
@@ -195,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746222023744</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add ContactSection with form and animations&#10;&#10;Introduced a new ContactSection component featuring a form with animations to collect user inquiries. Integrated localization for both English and Portuguese, and added dependencies for form handling. Updated the app structure to include the new section and ensured responsive design compatibility.">
+      <option name="closed" value="true" />
+      <created>1746222703412</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746222703412</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +220,7 @@
     <MESSAGE value="Add responsive improvements and enhance language/menu handling&#10;&#10;Improved responsive styling across multiple sections by introducing breakpoints for paddings, margins, and font sizes. Enhanced header functionality with outside click handling for menus, ensuring better user experience. Updated localization and corrected texts to maintain consistency across languages." />
     <MESSAGE value="Remove unused useEffect import from Section.tsx&#10;&#10;The useEffect hook was imported but not used in the component, leading to unnecessary clutter. This change improves code clarity and eliminates an unused dependency." />
     <MESSAGE value="Add responsive improvements and enhance menu/language handling&#10;&#10;Improved responsive styling with updated breakpoints for paddings, margins, and font sizes. Enhanced header functionality by implementing outside click handling for menus. Adjusted localization and corrected text inconsistencies for better multilanguage support." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add responsive improvements and enhance menu/language handling&#10;&#10;Improved responsive styling with updated breakpoints for paddings, margins, and font sizes. Enhanced header functionality by implementing outside click handling for menus. Adjusted localization and corrected text inconsistencies for better multilanguage support." />
+    <MESSAGE value="Add ContactSection with form and animations&#10;&#10;Introduced a new ContactSection component featuring a form with animations to collect user inquiries. Integrated localization for both English and Portuguese, and added dependencies for form handling. Updated the app structure to include the new section and ensured responsive design compatibility." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ContactSection with form and animations&#10;&#10;Introduced a new ContactSection component featuring a form with animations to collect user inquiries. Integrated localization for both English and Portuguese, and added dependencies for form handling. Updated the app structure to include the new section and ensured responsive design compatibility." />
   </component>
 </project>

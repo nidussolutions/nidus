@@ -62,17 +62,17 @@ export default function Header() {
         enter: {
             opacity: 0,
             y: 10,
-            transition: { duration: 0.2 }
+            transition: {duration: 0.2}
         },
         center: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.2 }
+            transition: {duration: 0.2}
         },
         exit: {
             opacity: 0,
             y: -10,
-            transition: { duration: 0.2 }
+            transition: {duration: 0.2}
         }
     };
 
@@ -122,7 +122,7 @@ export default function Header() {
                     whileTap={{scale: 0.95}}
                 >
                     <Link href="/"
-                          className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary hover:text-light-accent-purple dark:hover:text-dark-accent-purple transition">
+                          className="text-2xl font-bold   hover:text-light-accent-purple dark:hover:text-dark-accent-purple transition">
                         <motion.span
                             key={language}
                             initial={{opacity: 0, y: 20}}
@@ -130,7 +130,15 @@ export default function Header() {
                             exit={{opacity: 0, y: -20}}
                             transition={{duration: 0.3}}
                         >
-                            {t('header.brand')}
+                            <div className='flex items-center space-x-2'>
+                                <p className="text-[#F27405] dark:text-[#F25C05]">
+                                    {t('header.brand').split(' ')[0]}
+                                </p>
+                                <p className='text-light-text-primary dark:text-dark-text-primary'>
+                                    {t('header.brand').split(' ')[1]}{' '}
+                                    {t('header.brand').split(' ')[2]}
+                                </p>
+                            </div>
                         </motion.span>
                     </Link>
                 </motion.div>
@@ -324,9 +332,9 @@ export default function Header() {
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{opacity: 0, height: 0}}
+                        animate={{opacity: 1, height: 'auto'}}
+                        exit={{opacity: 0, height: 0}}
                         className="md:hidden bg-light-background dark:bg-dark-background border-t border-gray-200 dark:border-gray-700 mobile-menu"
                     >
                         <nav className="flex flex-col p-4 space-y-4">

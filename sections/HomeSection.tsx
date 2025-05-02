@@ -50,7 +50,15 @@ const HomeSection = ({
                             variants={textChangeVariants}
                             className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-light-text dark:text-dark-text"
                         >
-                            {t('home.title')}
+                            <div className='flex items-center space-x-2'>
+                                <p>
+                                    {t('home.title').split(' ')[0]}{' '}
+                                    {t('home.title').split(' ')[1]}
+                                </p>
+                                <p className='text-[#F27405] dark:text-[#F25C05]'>
+                                    {t('home.title').split(' ')[2]}
+                                </p>
+                            </div>
                         </motion.h1>
                         <motion.p
                             key={`home-description-${language}`}
@@ -68,7 +76,7 @@ const HomeSection = ({
                         className="mt-5 sm:mt-6 px-3 sm:px-4 py-2 text-base sm:text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 flex items-center"
                         onClick={() => window.location.href = `mailto:${t('page.email')}`}
                     >
-                        <Mail className="mr-2" size={20} />
+                        <Mail className="mr-2" size={20}/>
                         <AnimatePresence mode="wait">
                             <motion.p
                                 key={`page-contact-${language}`}

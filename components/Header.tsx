@@ -15,6 +15,26 @@ export default function Header() {
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            // Close mobile menu if open
+            if (menuOpen) {
+                setMenuOpen(false);
+            }
+
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+
+            // Update URL without causing a page jump
+            window.history.pushState(null, '', `/#${targetId}`);
+        }
+    };
+
     // Close menus when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -122,6 +142,7 @@ export default function Header() {
                                 key={item}
                                 href={`/#${item}`}
                                 className="relative overflow-hidden"
+                                onClick={(e) => handleSmoothScroll(e, item)}
                             >
                                 <AnimatePresence mode="wait">
                                     <motion.span
@@ -313,7 +334,7 @@ export default function Header() {
                                 <Link
                                     key={`mobile-${item}`}
                                     href={`/#${item}`}
-                                    onClick={() => setMenuOpen(false)}
+                                    onClick={(e) => handleSmoothScroll(e, item)}
                                     className="py-2 px-4 text-light-text-secondary dark:text-dark-text-secondary hover:bg-light-card dark:hover:bg-dark-card rounded-md transition-colors"
                                 >
                                     <AnimatePresence mode="wait">

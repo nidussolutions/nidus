@@ -1,5 +1,5 @@
-import {motion, AnimatePresence} from "framer-motion";
-import React from "react";
+import {motion, AnimatePresence, useInView, useScroll, useTransform} from "framer-motion";
+import React, { useRef, useEffect } from "react";
 
 type SectionsProps = {
     name: string;
@@ -7,10 +7,14 @@ type SectionsProps = {
 }
 
 const containerVariants = {
-    hidden: {opacity: 0},
+    hidden: {opacity: 0, y: 50},
     visible: {
         opacity: 1,
+        y: 0,
         transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 15,
             staggerChildren: 0.3,
             delayChildren: 0.2,
         },
@@ -18,13 +22,36 @@ const containerVariants = {
 };
 
 const Sections = ({name, children}: SectionsProps) => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { 
+        once: false, 
+        amount: 0.3, // Trigger when 30% of the section is visible
+        margin: "-100px 0px" // Negative margin to trigger slightly before the section enters the viewport
+    });
+
+    // Scroll-linked animation
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "end start"]
+    });
+
+    // Transform scroll progress to opacity and y values
+    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.3, 1, 1, 0.3]);
+    const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, -100]);
+
     return (
-        <section id={name} className="flex flex-col items-center justify-center w-full min-h-[80vh] py-12 md:py-16 lg:py-20">
+        <section 
+            id={name} 
+            ref={sectionRef}
+            className="flex flex-col items-center justify-center w-full min-h-[80vh] py-12 md:py-16 lg:py-20"
+        >
             <motion.div
                 initial="hidden"
-                animate="visible"
+                animate={isInView ? "visible" : "hidden"}
                 variants={containerVariants}
                 className="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-8"
+                transition={{ duration: 0.5 }}
+                style={{ opacity, y }}
             >
                 <motion.div
                     variants={containerVariants}

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
+    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/pt.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +113,8 @@
       <workItem from="1746156620601" duration="546000" />
       <workItem from="1746157247931" duration="48000" />
       <workItem from="1746157365132" duration="115000" />
+      <workItem from="1746157796546" duration="1231000" />
+      <workItem from="1746159045727" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`.">
       <option name="closed" value="true" />

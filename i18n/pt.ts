@@ -9,6 +9,7 @@ export const pt = {
         description: "Somos uma empresa de tecnologia especializada em desenvolvimento e design web.",
         warning: "O site esta passando por reformas. Para mais informações ou orçamentos, entre em contato.",
         contact: "Entre em contato",
+        email: "contato@nidussolutions.com",
     },
     footer: {
         contact: "Contato",

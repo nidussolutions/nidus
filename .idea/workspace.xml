@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose.">
+    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Add Google Analytics integration to layout&#10;&#10;Integrated Google Analytics into the app's layout component using the `GoogleAnalytics` component from `@next/third-parties`. This enables tracking of user interactions and enhances insights into app usage.">
+      <change afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/founders/joao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/founders/thiago.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sections/HomeSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sections/ServiceSections.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footers.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/pt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +45,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:nidussolutions/nidus.git&quot;,
-    &quot;accountId&quot;: &quot;bdf1c64f-413f-4792-ba8a-2aac4fcdd03d&quot;
+    &quot;url&quot;: &quot;https://github.com/nidussolutions/nidus.git&quot;,
+    &quot;accountId&quot;: &quot;4adecf53-7ab2-4fcf-8f0d-a1d677b541d4&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -51,25 +60,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jg/Documentos/nidus/nidus-site/app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/jg/Documentos/nidus/nidus-site/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "developer",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/jg/Documentos/nidus/nidus-site/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\joao.gustavo\\Documents\\GitHub\\nidus\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
@@ -115,6 +126,8 @@
       <workItem from="1746157365132" duration="115000" />
       <workItem from="1746157796546" duration="1231000" />
       <workItem from="1746159045727" duration="333000" />
+      <workItem from="1746198177055" duration="371000" />
+      <workItem from="1746212506814" duration="5823000" />
     </task>
     <task id="LOCAL-00001" summary="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`.">
       <option name="closed" value="true" />
@@ -140,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746157476198</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Google Analytics integration to layout&#10;&#10;Integrated Google Analytics into the app's layout component using the `GoogleAnalytics` component from `@next/third-parties`. This enables tracking of user interactions and enhances insights into app usage.">
+      <option name="closed" value="true" />
+      <created>1746198452074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746198452074</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +171,7 @@
     <MESSAGE value="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`." />
     <MESSAGE value="Add footer component and update i18n content&#10;&#10;Introduced a new footer component and integrated it into the layout. Updated i18n files (en and pt) with footer translations and new warnings for ongoing site renovations. Enhanced the home page with additional contact information and styling tweaks. Added Qodana configuration for static code analysis." />
     <MESSAGE value="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
+    <MESSAGE value="Add Google Analytics integration to layout&#10;&#10;Integrated Google Analytics into the app's layout component using the `GoogleAnalytics` component from `@next/third-parties`. This enables tracking of user interactions and enhances insights into app usage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Google Analytics integration to layout&#10;&#10;Integrated Google Analytics into the app's layout component using the `GoogleAnalytics` component from `@next/third-parties`. This enables tracking of user interactions and enhances insights into app usage." />
   </component>
 </project>

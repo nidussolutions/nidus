@@ -43,6 +43,10 @@
     --color-dark-purple-hover: #A855F7;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     transition: opacity 0.3s ease-in-out;
 }

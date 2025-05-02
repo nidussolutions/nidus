@@ -16,6 +16,24 @@ export default function Header() {
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
     // Animações
+    const textChangeVariants = {
+        enter: {
+            opacity: 0,
+            y: 10,
+            transition: { duration: 0.2 }
+        },
+        center: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.2 }
+        },
+        exit: {
+            opacity: 0,
+            y: -10,
+            transition: { duration: 0.2 }
+        }
+    };
+
     const menuVariants = {
         hidden: {
             opacity: 0,
@@ -54,7 +72,7 @@ export default function Header() {
             initial={{y: -100}}
             animate={{y: 0}}
             transition={{type: "spring", stiffness: 100, damping: 20}}
-            className="w-full z-50 bg-light-background dark:bg-dark-background backdrop-blur-md shadow-lg"
+            className="w-full z-50 bg-light-background dark:bg-dark-background backdrop-blur-md shadow-lg fixed top-0 left-0 right-0"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 <motion.div
@@ -76,6 +94,29 @@ export default function Header() {
                 </motion.div>
 
                 <div className="hidden md:flex items-center space-x-6">
+                    <nav className="hidden md:flex space-x-8 text-light-text-secondary dark:text-dark-text-secondary">
+                        {['services', 'aboutUs', 'contact'].map((item) => (
+                            <Link
+                                key={item}
+                                href={`/#${item}`}
+                                className="relative overflow-hidden"
+                            >
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={`header-${item}-${language}`}
+                                        initial="enter"
+                                        animate="center"
+                                        exit="exit"
+                                        variants={textChangeVariants}
+                                        className="block hover:text-light-accent-blue dark:hover:text-dark-accent-blue transition-colors"
+                                    >
+                                        {t(`header.${item}`)}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </Link>
+                        ))}
+                    </nav>
+
                     <div className="relative">
                         <motion.button
                             whileHover={{scale: 1.1}}

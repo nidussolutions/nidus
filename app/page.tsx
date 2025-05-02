@@ -1,6 +1,5 @@
 'use client';
 
-import {useI18n} from "@/contexts/I18nContext";
 import React from "react";
 import Layout from "@/components/Layout";
 import HomeSection from "@/sections/HomeSection";
@@ -8,8 +7,6 @@ import AboutUs from "@/sections/AboutUs";
 import ServiceSections from "@/sections/ServiceSections";
 
 export default function Home() {
-    const {t, language} = useI18n();
-
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update brand name and improve localization in header and home sectionsUpdate branding in i18n and improve Home/Header components&#10;&#10;Updated company branding in English and Portuguese i18n files to &quot;Nidus Digital Solutions&quot; for consistency. Enhanced the Home and Header components with better design and text formatting for dynamic styling. Added favicon metadata and improved transition/animation code formatting for readability.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update brand name and enhance localization in UI components&#10;&#10;Updated company branding in i18n files to &quot;Nidus Digital Solutions&quot; for consistency across languages. Improved Home and Header components with better design, text formatting, and dynamic styling. Also added favicon metadata and refined animation code for improved readability." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +115,7 @@
       <workItem from="1746159045727" duration="333000" />
       <workItem from="1746198177055" duration="371000" />
       <workItem from="1746212506814" duration="6017000" />
-      <workItem from="1746219656419" duration="4262000" />
+      <workItem from="1746219656419" duration="4569000" />
     </task>
     <task id="LOCAL-00001" summary="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`.">
       <option name="closed" value="true" />
@@ -208,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746223623143</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update brand name and enhance localization in UI components&#10;&#10;Updated company branding in i18n files to &quot;Nidus Digital Solutions&quot; for consistency across languages. Improved Home and Header components with better design, text formatting, and dynamic styling. Also added favicon metadata and refined animation code for improved readability.">
+      <option name="closed" value="true" />
+      <created>1746224276841</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746224276842</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +231,7 @@
     <MESSAGE value="Add responsive improvements and enhance menu/language handling&#10;&#10;Improved responsive styling with updated breakpoints for paddings, margins, and font sizes. Enhanced header functionality by implementing outside click handling for menus. Adjusted localization and corrected text inconsistencies for better multilanguage support." />
     <MESSAGE value="Add ContactSection with form and animations&#10;&#10;Introduced a new ContactSection component featuring a form with animations to collect user inquiries. Integrated localization for both English and Portuguese, and added dependencies for form handling. Updated the app structure to include the new section and ensured responsive design compatibility." />
     <MESSAGE value="Update brand name and improve localization in header and home sectionsUpdate branding in i18n and improve Home/Header components&#10;&#10;Updated company branding in English and Portuguese i18n files to &quot;Nidus Digital Solutions&quot; for consistency. Enhanced the Home and Header components with better design and text formatting for dynamic styling. Added favicon metadata and improved transition/animation code formatting for readability." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update brand name and improve localization in header and home sectionsUpdate branding in i18n and improve Home/Header components&#10;&#10;Updated company branding in English and Portuguese i18n files to &quot;Nidus Digital Solutions&quot; for consistency. Enhanced the Home and Header components with better design and text formatting for dynamic styling. Added favicon metadata and improved transition/animation code formatting for readability." />
+    <MESSAGE value="Update brand name and enhance localization in UI components&#10;&#10;Updated company branding in i18n files to &quot;Nidus Digital Solutions&quot; for consistency across languages. Improved Home and Header components with better design, text formatting, and dynamic styling. Also added favicon metadata and refined animation code for improved readability." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update brand name and enhance localization in UI components&#10;&#10;Updated company branding in i18n files to &quot;Nidus Digital Solutions&quot; for consistency across languages. Improved Home and Header components with better design, text formatting, and dynamic styling. Also added favicon metadata and refined animation code for improved readability." />
   </component>
 </project>

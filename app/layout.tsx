@@ -5,6 +5,7 @@ import {Inter} from "next/font/google";
 import {I18nProvider} from "@/contexts/I18nContext";
 import {ThemeProvider} from '@/contexts/ThemeContext';
 import Header from "@/components/Header";
+import Footer from "@/components/Footers";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
             <I18nProvider>
                 <Header/>
                 {children}
+                <Footer />
             </I18nProvider>
         </ThemeProvider>
         </body>

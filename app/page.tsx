@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import HomeSection from "@/sections/HomeSection";
 import AboutUs from "@/sections/AboutUs";
 import ServiceSections from "@/sections/ServiceSections";
+import ContactSection from "@/sections/ContactSection";
 
 export default function Home() {
     const containerVariants = {
@@ -76,6 +77,11 @@ export default function Home() {
                 fadeInVariants={fadeInVariants}
             />
             <AboutUs
+                containerVariants={containerVariants}
+                textChangeVariants={textChangeVariants}
+                fadeInVariants={fadeInVariants}
+            />
+            <ContactSection
                 containerVariants={containerVariants}
                 textChangeVariants={textChangeVariants}
                 fadeInVariants={fadeInVariants}

@@ -59,5 +59,23 @@ export const pt = {
             title: "Serviços personalizados",
             description: "Soluções sob medida para atender às necessidades específicas do seu projeto na área de desenvolvimento web."
         }
+    },
+    contact: {
+        title: "Entre em Contato",
+        description: "Tem uma pergunta ou quer trabalhar conosco? Preencha o formulário abaixo e entraremos em contato o mais breve possível.",
+        alternativeContact: "Ou entre em contato diretamente por e-mail:",
+        form: {
+            name: "Nome",
+            namePlaceholder: "Digite seu nome",
+            email: "E-mail",
+            emailPlaceholder: "Digite seu e-mail",
+            subject: "Assunto",
+            subjectPlaceholder: "Sobre o que se trata?",
+            message: "Mensagem",
+            messagePlaceholder: "Conte-nos mais sobre seu projeto ou pergunta...",
+            submit: "Enviar Mensagem",
+            successMessage: "Obrigado! Sua mensagem foi enviada com sucesso.",
+            errorMessage: "Ops! Algo deu errado. Por favor, tente novamente mais tarde."
+        }
     }
 }

@@ -1,5 +1,5 @@
 import {motion, AnimatePresence, useInView, useScroll, useTransform} from "framer-motion";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 type SectionsProps = {
     name: string;
@@ -26,7 +26,7 @@ const Sections = ({name, children}: SectionsProps) => {
     const isInView = useInView(sectionRef, { 
         once: false, 
         amount: 0.3, // Trigger when 30% of the section is visible
-        margin: "-100px 0px" // Negative margin to trigger slightly before the section enters the viewport
+        margin: "-50px 0px" // Negative margin to trigger slightly before the section enters the viewport
     });
 
     // Scroll-linked animation

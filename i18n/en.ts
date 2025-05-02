@@ -59,5 +59,23 @@ export const en = {
             title: "Custom Services",
             description: "Tailored solutions to meet your project's specific needs in web development."
         }
+    },
+    contact: {
+        title: "Contact Us",
+        description: "Have a question or want to work with us? Fill out the form below and we'll get back to you as soon as possible.",
+        alternativeContact: "Or contact us directly via email:",
+        form: {
+            name: "Name",
+            namePlaceholder: "Enter your name",
+            email: "Email",
+            emailPlaceholder: "Enter your email",
+            subject: "Subject",
+            subjectPlaceholder: "What is this about?",
+            message: "Message",
+            messagePlaceholder: "Tell us more about your project or question...",
+            submit: "Send Message",
+            successMessage: "Thank you! Your message has been sent successfully.",
+            errorMessage: "Oops! Something went wrong. Please try again later."
+        }
     }
 }

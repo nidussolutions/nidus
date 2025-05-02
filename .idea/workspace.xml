@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jgbiispo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:nidussolutions/nidus.git&quot;,
+    &quot;accountId&quot;: &quot;bdf1c64f-413f-4792-ba8a-2aac4fcdd03d&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2wUsj2royhXSwZj2KJ8IU7PGkLo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jg/Documentos/nidus/nidus-site/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/jg/Documentos/nidus/nidus-site/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/messages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2585df6b-9832-41a2-a345-e623e5d5e6d7" name="Changes" comment="" />
+      <created>1746107618848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746107618848</updated>
+      <workItem from="1746107620405" duration="8025000" />
+      <workItem from="1746156620601" duration="546000" />
+      <workItem from="1746157247931" duration="48000" />
+      <workItem from="1746157365132" duration="115000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`.">
+      <option name="closed" value="true" />
+      <created>1746156021459</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746156021459</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add footer component and update i18n content&#10;&#10;Introduced a new footer component and integrated it into the layout. Updated i18n files (en and pt) with footer translations and new warnings for ongoing site renovations. Enhanced the home page with additional contact information and styling tweaks. Added Qodana configuration for static code analysis.">
+      <option name="closed" value="true" />
+      <created>1746157162570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746157162571</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose.">
+      <option name="closed" value="true" />
+      <created>1746157476198</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746157476198</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add theme, i18n contexts, and header component&#10;&#10;Replaced default app structure with contexts for theming and internationalization (i18n). Introduced &quot;Header&quot; component with language and theme toggles. Updated styles, removed unused files, and added supporting libraries in `package-lock.json`." />
+    <MESSAGE value="Add footer component and update i18n content&#10;&#10;Introduced a new footer component and integrated it into the layout. Updated i18n files (en and pt) with footer translations and new warnings for ongoing site renovations. Enhanced the home page with additional contact information and styling tweaks. Added Qodana configuration for static code analysis." />
+    <MESSAGE value="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README with project details and contribution info&#10;&#10;Replaced the generic Next.js boilerplate content with specific details about the Nidus Soluções project. Included information about the repository, contribution policy, and contact instructions. This improves clarity and aligns the README with the project's purpose." />
+  </component>
+</project>

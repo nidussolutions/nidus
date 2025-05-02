@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <div
-            className="flex flex-col items-center min-h-screen justify-center mt-[-15em] p-4 bg-light-background dark:bg-dark-background">
+            className="flex flex-col items-center min-h-screen justify-center mt-[-5em] p-4 bg-light-background dark:bg-dark-background">
             <div className="flex flex-col items-center justify-center">
                 <h1 className="text-4xl font-bold text-center text-light-accent-purple dark:text-dark-purple">
                     {t("page.welcome")}

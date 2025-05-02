@@ -40,7 +40,7 @@ const AboutUs = ({
         {
             name: 'Thiago Viana',
             role: t('aboutUs.founder_cmo'),
-            history: t('aboutUs.founder_ceo_history'),
+            history: t('aboutUs.founder_cmo_history'),
             imageSrc: '/founders/thiago.png'
         }
     ];
@@ -51,7 +51,7 @@ const AboutUs = ({
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="flex flex-col mt-4 items-center justify-center w-full min-h-screen p-4 py-20"
+                className="flex flex-col mt-2 sm:mt-4 items-center justify-center w-full p-4 sm:p-6 md:p-8 py-6 sm:py-8 md:py-10"
             >
                 <motion.div
                     variants={fadeInVariants}
@@ -64,7 +64,7 @@ const AboutUs = ({
                             animate="center"
                             exit="exit"
                             variants={textChangeVariants}
-                            className="text-4xl font-bold text-center text-light-text dark:text-dark-text mb-12"
+                            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-light-text dark:text-dark-text mb-8 sm:mb-10 md:mb-12"
                         >
                             {t('aboutUs.title')}
                         </motion.h1>
@@ -82,7 +82,7 @@ const AboutUs = ({
                                     animate="center"
                                     exit="exit"
                                     variants={textChangeVariants}
-                                    className="text-2xl font-semibold text-light-text dark:text-dark-text">
+                                    className="text-xl sm:text-2xl font-semibold text-light-text dark:text-dark-text">
                                     {t('aboutUs.company_title')}
                                 </motion.h2>
                             </AnimatePresence>
@@ -94,7 +94,7 @@ const AboutUs = ({
                                 animate="center"
                                 exit="exit"
                                 variants={textChangeVariants}
-                                className="text-gray-600 dark:text-gray-300 text-lg">
+                                className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
                                 {t('aboutUs.company_description')}
                             </motion.p>
                         </AnimatePresence>
@@ -107,7 +107,7 @@ const AboutUs = ({
                             animate="center"
                             exit="exit"
                             variants={textChangeVariants}
-                            className="text-2xl font-semibold text-light-text dark:text-dark-text mb-8">
+                            className="text-xl sm:text-2xl font-semibold text-light-text dark:text-dark-text mb-6 sm:mb-8">
                             {t('aboutUs.team_title')}
                         </motion.h2>
                     </AnimatePresence>
@@ -117,11 +117,11 @@ const AboutUs = ({
                             <motion.div
                                 key={`member-${member.name}`}
                                 variants={fadeInVariants}
-                                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                                className="bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex flex-col items-center mb-4">
-                                    <div className="flex items-center mb-2">
-                                        <div className="mr-3 overflow-hidden rounded-full w-16 h-16 flex">
+                                    <div className="flex flex-col sm:flex-row items-center mb-2">
+                                        <div className="mb-3 sm:mb-0 sm:mr-3 overflow-hidden rounded-full w-16 h-16 flex">
                                             <Image
                                                 src={member.imageSrc}
                                                 alt={member.name}
@@ -135,17 +135,17 @@ const AboutUs = ({
                                                 }}
                                             />
                                         </div>
-                                        <div>
-                                            <h3 className="text-xl font-semibold text-light-text dark:text-dark-text">
+                                        <div className="text-center sm:text-left">
+                                            <h3 className="text-lg sm:text-xl font-semibold text-light-text dark:text-dark-text">
                                                 {member.name}
                                             </h3>
-                                            <p className="text-gray-600 dark:text-gray-300">
+                                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                                                 {member.role}
                                             </p>
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="text-gray-500 dark:text-gray-400 text-sm">
+                                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                                             {member.history}
                                         </p>
                                     </div>

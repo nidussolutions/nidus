@@ -35,7 +35,7 @@ const HomeSection = ({
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="flex flex-col items-center justify-center w-full h-screen p-4"
+                className="flex flex-col items-center justify-center w-full p-4 sm:p-6 md:p-8 py-6 sm:py-8 md:py-10"
             >
                 <motion.div
                     variants={fadeInVariants}
@@ -48,7 +48,7 @@ const HomeSection = ({
                             animate="center"
                             exit="exit"
                             variants={textChangeVariants}
-                            className="text-4xl font-bold text-center text-light-text dark:text-dark-text"
+                            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-light-text dark:text-dark-text"
                         >
                             {t('home.title')}
                         </motion.h1>
@@ -58,14 +58,14 @@ const HomeSection = ({
                             animate="center"
                             exit="exit"
                             variants={textChangeVariants}
-                            className="mt-4 text-lg text-center text-light-text dark:text-dark-text"
+                            className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-center text-light-text dark:text-dark-text"
                         >
                             {t('home.description')}
                         </motion.p>
                     </AnimatePresence>
 
                     <button
-                        className="mt-6 px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 flex items-center"
+                        className="mt-5 sm:mt-6 px-3 sm:px-4 py-2 text-base sm:text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 flex items-center"
                         onClick={() => window.location.href = `mailto:${t('page.email')}`}
                     >
                         <Mail className="mr-2" size={20} />

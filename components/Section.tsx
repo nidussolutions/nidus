@@ -19,12 +19,12 @@ const containerVariants = {
 
 const Sections = ({name, children}: SectionsProps) => {
     return (
-        <section id={name} className="flex flex-col items-center justify-center w-full h-screen">
+        <section id={name} className="flex flex-col items-center justify-center w-full min-h-[80vh] py-12 md:py-16 lg:py-20">
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="flex flex-col items-center min-h-screen justify-center mt-[-5em] p-4"
+                className="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-8"
             >
                 <motion.div
                     variants={containerVariants}

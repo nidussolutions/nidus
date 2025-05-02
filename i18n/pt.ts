@@ -8,9 +8,9 @@ export const pt = {
         contact: "Contato",
     },
     page: {
-        welcome: "Bem vindo ao Nidus",
+        welcome: "Bem-vindo ao Nidus",
         description: "Somos uma empresa de tecnologia especializada em desenvolvimento e design web.",
-        warning: "O site esta passando por reformas. Para mais informações ou orçamentos, entre em contato.",
+        warning: "O site está passando por reformas. Para mais informações ou orçamentos, entre em contato.",
         contact: "Entre em contato",
         email: "contato@nidussolutions.com",
     },
@@ -25,12 +25,12 @@ export const pt = {
     aboutUs: {
         title: "Sobre Nós",
         company_title: "Sobre a Nidus",
-        company_description: "A Nidus é uma empresa de desenvolvimento de softwares focada em pequenos negócios, fundada em 2024. Nós nos especializamos em criar soluções digitais personalizadas que ajudam pequenos negócios a crescer e ter sucesso no mundo digital.",
+        company_description: "A Nidus é uma empresa de desenvolvimento de software focada em pequenos negócios, fundada em 2024. Nós nos especializamos em criar soluções digitais personalizadas que ajudam pequenos negócios a crescer e ter sucesso no mundo digital.",
         team_title: "Nossa Equipe",
         founder_ceo: "Fundador & CEO",
-        founder_ceo_history: "Com experiencia na área de desenvolvimento de software e no setor publico e uma paixão por tecnologia, nosso fundador tem mais de 5 anos de experiência na indústria. Ele trabalhou com várias startups e empresas estatais, ajudando-as a alcançar seus objetivos por meio de soluções inovadoras de software.",
+        founder_ceo_history: "Com sólida experiência em desenvolvimento de software e no setor público, nosso fundador possui mais de 5 anos de atuação na indústria tecnológica. Sua trajetória inclui colaborações bem-sucedidas com diversas startups e empresas estatais, onde implementou soluções inovadoras que transformaram processos e impulsionaram resultados. Sua visão estratégica e conhecimento técnico são fundamentais para liderar a Nidus rumo à excelência em soluções digitais.",
         founder_cmo: "Fundador & CMO",
-        founder_cmo_history: "Com experienvcia na área de desenvolvimento e marketing e uma paixão por tecnologia, nosso fundador tem mais de 5 anos de experiência na indústria. já ajudando-as a alcançar seus objetivos por meio de soluções inovadoras no meio digital.",
+        founder_cmo_history: "Especialista em marketing digital e desenvolvimento web, nosso CMO acumula mais de 5 anos de experiência no mercado digital. Com um histórico comprovado em estratégias de marketing e desenvolvimento de produtos digitais, sua expertise tem sido fundamental para criar soluções que não apenas atendem às necessidades técnicas, mas também geram resultados mensuráveis para nossos clientes. Sua abordagem inovadora combina criatividade e análise de dados para maximizar o sucesso dos projetos.",
     },
     services: {
         title: "Nossos Serviços",

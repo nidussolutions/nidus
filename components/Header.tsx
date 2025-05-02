@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Link from 'next/link';
 import {Menu, X, Sun, Moon, Globe} from 'lucide-react';
 import {useTheme} from '@/contexts/ThemeContext';
@@ -14,6 +14,28 @@ export default function Header() {
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
+
+    // Close menus when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+
+            // Check if click is outside language menu
+            if (languageMenuOpen && !target.closest('.language-menu-container')) {
+                setLanguageMenuOpen(false);
+            }
+
+            // Check if click is outside mobile menu and not on the menu toggle button
+            if (menuOpen && !target.closest('.mobile-menu') && !target.closest('.menu-toggle')) {
+                setMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [menuOpen, languageMenuOpen]);
 
     // Animações
     const textChangeVariants = {
@@ -117,7 +139,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="relative">
+                    <div className="relative language-menu-container">
                         <motion.button
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}
@@ -134,7 +156,7 @@ export default function Header() {
                                     initial="hidden"
                                     animate="visible"
                                     exit="exit"
-                                    className="absolute right-0 mt-2 w-48 rounded-lg shadow-sm ring-1 ring-black bg-light-card dark:bg-dark-card"
+                                    className="absolute right-0 mt-2 w-48 rounded-lg shadow-sm ring-1 ring-black bg-light-card dark:bg-dark-card z-50"
                                 >
                                     <div className="py-1" role="menu" aria-orientation="vertical">
                                         <motion.button
@@ -188,15 +210,55 @@ export default function Header() {
                 </div>
 
                 <div className="md:hidden flex items-center">
-                    <motion.button
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.9}}
-                        onClick={() => setLanguageMenuOpen(prev => !prev)}
-                        className="p-2 mr-2 rounded-full hover:bg-light-card dark:hover:bg-dark-card transition"
-                        aria-label={t('header.language')}
-                    >
-                        <Globe className="text-light-text-secondary dark:text-dark-text-secondary"/>
-                    </motion.button>
+                    <div className="relative language-menu-container">
+                        <motion.button
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            onClick={() => setLanguageMenuOpen(prev => !prev)}
+                            className="p-2 mr-2 rounded-full hover:bg-light-card dark:hover:bg-dark-card transition"
+                            aria-label={t('header.language')}
+                        >
+                            <Globe className="text-light-text-secondary dark:text-dark-text-secondary"/>
+                        </motion.button>
+                        <AnimatePresence>
+                            {languageMenuOpen && (
+                                <motion.div
+                                    variants={menuVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    className="absolute right-0 mt-2 w-48 rounded-lg shadow-sm ring-1 ring-black bg-light-card dark:bg-dark-card z-50"
+                                >
+                                    <div className="py-1" role="menu" aria-orientation="vertical">
+                                        <motion.button
+                                            whileHover={{backgroundColor: "rgba(0,0,0,0.05)"}}
+                                            className={`block px-4 py-2 text-sm w-full text-left ${
+                                                language === 'en'
+                                                    ? 'text-light-accent-purple dark:text-dark-accent-purple font-medium'
+                                                    : 'text-light-text-primary dark:text-dark-text-primary'
+                                            }`}
+                                            onClick={() => handleLanguageChange('en')}
+                                            role="menuitem"
+                                        >
+                                            {t('header.languageEN')}
+                                        </motion.button>
+                                        <motion.button
+                                            whileHover={{backgroundColor: "rgba(0,0,0,0.05)"}}
+                                            className={`block px-4 py-2 text-sm w-full text-left ${
+                                                language === 'pt'
+                                                    ? 'text-light-accent-purple dark:text-dark-accent-purple font-medium'
+                                                    : 'text-light-text-primary dark:text-dark-text-primary'
+                                            }`}
+                                            onClick={() => handleLanguageChange('pt')}
+                                            role="menuitem"
+                                        >
+                                            {t('header.languagePT')}
+                                        </motion.button>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                     <motion.button
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
@@ -220,7 +282,7 @@ export default function Header() {
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
                         onClick={toggleMenu}
-                        className="p-2 rounded-md text-light-text-secondary dark:text-dark-text-secondary hover:text-light-text-primary dark:hover:text-dark-text-primary transition"
+                        className="p-2 rounded-md text-light-text-secondary dark:text-dark-text-secondary hover:text-light-text-primary dark:hover:text-dark-text-primary transition menu-toggle"
                     >
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -236,6 +298,41 @@ export default function Header() {
                     </motion.button>
                 </div>
             </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden bg-light-background dark:bg-dark-background border-t border-gray-200 dark:border-gray-700 mobile-menu"
+                    >
+                        <nav className="flex flex-col p-4 space-y-4">
+                            {['services', 'aboutUs', 'contact'].map((item) => (
+                                <Link
+                                    key={`mobile-${item}`}
+                                    href={`/#${item}`}
+                                    onClick={() => setMenuOpen(false)}
+                                    className="py-2 px-4 text-light-text-secondary dark:text-dark-text-secondary hover:bg-light-card dark:hover:bg-dark-card rounded-md transition-colors"
+                                >
+                                    <AnimatePresence mode="wait">
+                                        <motion.span
+                                            key={`mobile-header-${item}-${language}`}
+                                            initial="enter"
+                                            animate="center"
+                                            exit="exit"
+                                            variants={textChangeVariants}
+                                        >
+                                            {t(`header.${item}`)}
+                                        </motion.span>
+                                    </AnimatePresence>
+                                </Link>
+                            ))}
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 }

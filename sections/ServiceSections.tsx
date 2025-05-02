@@ -53,7 +53,7 @@ const ServiceSections = ({
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="flex flex-col mt-4 items-center justify-center w-full min-h-screen p-4 py-20"
+                className="flex flex-col sm:mt-4 items-center justify-center w-full p-4 sm:p-6 md:p-8 py-6 sm:py-8 md:py-10"
             >
                 <motion.div
                     variants={fadeInVariants}
@@ -66,7 +66,7 @@ const ServiceSections = ({
                             animate="center"
                             exit="exit"
                             variants={textChangeVariants}
-                            className="text-4xl font-bold text-center text-light-text dark:text-dark-text mb-12"
+                            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-light-text dark:text-dark-text mb-8 sm:mb-10 md:mb-12"
                         >
                             {t('services.title')}
                         </motion.h1>
@@ -77,10 +77,10 @@ const ServiceSections = ({
                             <motion.div
                                 key={`service-${service}`}
                                 variants={fadeInVariants}
-                                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                                className="bg-white dark:bg-gray-800 p-4 sm:p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                             >
-                                <div className="flex items-center mb-4">
-                                    <div className="mr-3 p-2 bg-blue-100 dark:bg-blue-900 rounded-full">
+                                <div className="flex flex-col sm:flex-row items-center sm:items-start mb-4">
+                                    <div className="mb-2 sm:mb-0 sm:mr-3 p-2 bg-blue-100 dark:bg-blue-900 rounded-full">
                                         {React.createElement(serviceIcons[service], {
                                             size: 24,
                                             className: "text-blue-500 dark:text-blue-300"
@@ -93,7 +93,7 @@ const ServiceSections = ({
                                             animate="center"
                                             exit="exit"
                                             variants={textChangeVariants}
-                                            className="text-xl font-semibold text-light-text dark:text-dark-text">
+                                            className="text-lg sm:text-xl font-semibold text-center sm:text-left text-light-text dark:text-dark-text">
                                             {t(`services.${service}.title`)}
                                         </motion.h3>
                                     </AnimatePresence>
@@ -105,7 +105,7 @@ const ServiceSections = ({
                                         animate="center"
                                         exit="exit"
                                         variants={textChangeVariants}
-                                        className="text-gray-600 dark:text-gray-300">
+                                        className="text-sm sm:text-base text-gray-600 dark:text-gray-300 text-center sm:text-left">
                                         {t(`services.${service}.description`)}
                                     </motion.p>
                                 </AnimatePresence>
@@ -114,7 +114,7 @@ const ServiceSections = ({
                     </div>
 
                     <button
-                        className="mt-12 px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 flex items-center"
+                        className="mt-8 sm:mt-10 md:mt-12 px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 flex items-center"
                         onClick={() => window.location.href = `mailto:${t('page.email')}`}
                     >
                         <Mail className="mr-2" size={20}/>

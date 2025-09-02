@@ -1,5 +1,19 @@
-import { Stack, Box, Container, Image } from '@chakra-ui/react';
-import { useColorModeValue } from './ui/color-mode';
+'use client';
+
+import { useMemo } from 'react';
+import Link from 'next/link';
+import {
+  Box,
+  Container,
+  Stack,
+  Image,
+  IconButton,
+  Collapsible,
+  useDisclosure,
+  HStack,
+  Text,
+} from '@chakra-ui/react';
+import { usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
   { label: 'Início', href: '/' },
@@ -7,58 +21,183 @@ const NAV_ITEMS = [
 ];
 
 const LOGO_DARK = '/logo-dark.png';
-const LOGO_LIGHT = '/logo-light.png';
 
-const Logo = () => {
-  const logoSrc = useColorModeValue(LOGO_LIGHT, LOGO_DARK);
-  return <Image src={logoSrc} boxSize={['20px', '50px', '60px']} />;
-};
-
-const NavItens = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-
+function Logo() {
   return (
-    <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Box
-            as="a"
-            p={2}
-            href={navItem.href ?? '#'}
-            fontSize={['md', 'md', 'lg', 'lg']}
-            fontWeight={500}
-            color={linkColor}
-            _hover={{
-              textDecoration: 'none',
-              color: linkHoverColor,
-            }}
-          >
-            {navItem.label}
-          </Box>
-        </Box>
-      ))}
-    </Stack>
+    <Link href="/" aria-label="NIDUS - Início">
+      <HStack spacing={3}>
+        <Image src={LOGO_DARK} alt="NIDUS" boxSize={['28px', '36px', '40px']} />
+        <Text
+          display={['none', 'block']}
+          fontFamily="edosz"
+          letterSpacing="0.18em"
+          fontSize={['xs', 'sm']}
+          color="whiteAlpha.900"
+          textTransform="uppercase"
+        >
+          Nidus
+        </Text>
+      </HStack>
+    </Link>
   );
-};
+}
 
-const Header = () => {
+function NavLink({ href, children, isActive }) {
+  const color = 'whiteAlpha.900';
+  const hover = 'cyan.300';
+  const underline = isActive ? 1 : 0;
+
   return (
-    <Container
-      maxW="full"
-      py={2}
-      as="header"
-      role="banner"
-      boxShadow={['sm', 'sm', 'md', 'md']}
+    <Box
+      as={Link}
+      href={href}
+      position="relative"
+      px={2}
+      py={1}
+      fontWeight={500}
+      color={color}
+      _after={{
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: '-4px',
+        height: '2px',
+        bgGradient: 'linear(to-r, cyan.400, purple.500)',
+        transform: `scaleX(${underline})`,
+        transformOrigin: 'left',
+        transition: 'transform .25s ease',
+      }}
+      _hover={{ color: hover, _after: { transform: 'scaleX(1)' } }}
     >
-      <Container maxW="container.xl" justifyContent={'center'}>
-        <Stack direction={'row'} justify={'space-between'} align={'center'}>
-          <Logo />
-          <NavItens />
-        </Stack>
-      </Container>
+      {children}
+    </Box>
+  );
+}
+
+function DesktopNav() {
+  const pathname = usePathname();
+  return (
+    <HStack as="nav" spacing={4}>
+      {NAV_ITEMS.map((item) => (
+        <NavLink
+          key={item.href}
+          href={item.href}
+          isActive={pathname === item.href}
+        >
+          {item.label}
+        </NavLink>
+      ))}
+    </HStack>
+  );
+}
+
+function MobileNav({ isOpen }) {
+  const pathname = usePathname();
+  const linkColor = 'whiteAlpha.900';
+  const hover = 'cyan.300';
+
+  return (
+    <Collapsible.Root open={isOpen}>
+      <Collapsible.Content>
+        <Box
+          mt={2}
+          py={3}
+          px={3}
+          rounded="lg"
+          bg="whiteAlpha.100"
+          border="1px solid"
+          borderColor="whiteAlpha.200"
+          backdropFilter="blur(10px)"
+        >
+          <Stack as="nav" spacing={2}>
+            {NAV_ITEMS.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Box
+                  key={item.href}
+                  as={Link}
+                  href={item.href}
+                  px={3}
+                  py={2}
+                  rounded="md"
+                  color={linkColor}
+                  bg={active ? 'whiteAlpha.200' : 'transparent'}
+                  _hover={{ color: hover, bg: 'whiteAlpha.100' }}
+                >
+                  {item.label}
+                </Box>
+              );
+            })}
+          </Stack>
+        </Box>
+      </Collapsible.Content>
+    </Collapsible.Root>
+  );
+}
+
+export default function Header() {
+  const { isOpen, onToggle } = useDisclosure();
+
+  const bg = useMemo(
+    () => 'linear-gradient(to-b, rgba(10,12,18,.85), rgba(14,16,22,.65))',
+    []
+  );
+  const borderColor = 'whiteAlpha.200';
+
+  return (
+    <Container maxW="container.xl" py={2}>
+      <Stack direction="row" align="center" justify="space-between">
+        <Logo />
+
+        <Box display={['none', 'none', 'block']}>
+          <DesktopNav />
+        </Box>
+
+        <Box display={['block', 'block', 'none']}>
+          <IconButton
+            aria-label="Abrir menu"
+            onClick={onToggle}
+            size="sm"
+            variant="ghost"
+            color="whiteAlpha.900"
+            _hover={{ bg: 'whiteAlpha.200' }}
+          >
+            <Box as="span" display="inline-block" lineHeight={0}>
+              <Box
+                as="span"
+                display="block"
+                w="18px"
+                h="2px"
+                bg="currentColor"
+                mb="4px"
+                rounded="full"
+              />
+              <Box
+                as="span"
+                display="block"
+                w="18px"
+                h="2px"
+                bg="currentColor"
+                mb="4px"
+                rounded="full"
+              />
+              <Box
+                as="span"
+                display="block"
+                w="18px"
+                h="2px"
+                bg="currentColor"
+                rounded="full"
+              />
+            </Box>
+          </IconButton>
+        </Box>
+      </Stack>
+
+      <Box display={['block', 'block', 'none']}>
+        <MobileNav isOpen={isOpen} />
+      </Box>
     </Container>
   );
-};
-
-export default Header;
+}

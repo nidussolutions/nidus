@@ -10,9 +10,10 @@ export default function Logo(props) {
   const logoSrc = useColorModeValue(LOGO_LIGHT, LOGO_DARK);
   return (
     <Image
+      mt={-4}
       src={logoSrc}
       alt="NIDUS"
-      boxSize={['200px', '250px', '500px']}
+      boxSize={['200px', '250px', '400px']}
       {...props}
     />
   );

@@ -4,9 +4,6 @@ import { useColorModeValue } from './ui/color-mode';
 const NAV_ITEMS = [
   { label: 'Início', href: '/' },
   { label: 'Sobre', href: '/about' },
-  { label: 'Serviços', href: '/services' },
-  { label: 'Projetos', href: '/projects' },
-  { label: 'Contato', href: '/contact' },
 ];
 
 const LOGO_DARK = '/logo-dark.png';

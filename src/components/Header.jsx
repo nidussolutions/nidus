@@ -100,50 +100,10 @@ export default function Header() {
       <Stack direction="row" align="center" justify="space-between">
         <Logo />
 
-        <Box>
-          <IconButton
-            aria-label="Abrir menu"
-            onClick={onToggle}
-            size="sm"
-            variant="ghost"
-            color="whiteAlpha.900"
-            _hover={{ bg: 'whiteAlpha.200' }}
-          >
-            <Box as="span" display="inline-block" lineHeight={0}>
-              <Box
-                as="span"
-                display="block"
-                w="18px"
-                h="2px"
-                bg="currentColor"
-                mb="4px"
-                rounded="full"
-              />
-              <Box
-                as="span"
-                display="block"
-                w="18px"
-                h="2px"
-                bg="currentColor"
-                mb="4px"
-                rounded="full"
-              />
-              <Box
-                as="span"
-                display="block"
-                w="18px"
-                h="2px"
-                bg="currentColor"
-                rounded="full"
-              />
-            </Box>
-          </IconButton>
+        <Box display={['none', 'none', 'block']}>
+          <DesktopNav />
         </Box>
       </Stack>
-
-      <Box display={['block', 'block', 'none']}>
-        <MobileNav isOpen={isOpen} />
-      </Box>
     </Container>
   );
 }

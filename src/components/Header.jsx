@@ -92,69 +92,15 @@ function DesktopNav() {
   );
 }
 
-function MobileNav({ isOpen }) {
-  const pathname = usePathname();
-  const linkColor = 'whiteAlpha.900';
-  const hover = 'cyan.300';
-
-  return (
-    <Collapsible.Root open={isOpen}>
-      <Collapsible.Content>
-        <Box
-          mt={2}
-          py={3}
-          px={3}
-          rounded="lg"
-          bg="whiteAlpha.100"
-          border="1px solid"
-          borderColor="whiteAlpha.200"
-          backdropFilter="blur(10px)"
-        >
-          <Stack as="nav" spacing={2}>
-            {NAV_ITEMS.map((item) => {
-              const active = pathname === item.href;
-              return (
-                <Box
-                  key={item.href}
-                  as={Link}
-                  href={item.href}
-                  px={3}
-                  py={2}
-                  rounded="md"
-                  color={linkColor}
-                  bg={active ? 'whiteAlpha.200' : 'transparent'}
-                  _hover={{ color: hover, bg: 'whiteAlpha.100' }}
-                >
-                  {item.label}
-                </Box>
-              );
-            })}
-          </Stack>
-        </Box>
-      </Collapsible.Content>
-    </Collapsible.Root>
-  );
-}
-
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-
-  const bg = useMemo(
-    () => 'linear-gradient(to-b, rgba(10,12,18,.85), rgba(14,16,22,.65))',
-    []
-  );
-  const borderColor = 'whiteAlpha.200';
 
   return (
     <Container maxW="container.xl" py={2}>
       <Stack direction="row" align="center" justify="space-between">
         <Logo />
 
-        <Box display={['none', 'none', 'block']}>
-          <DesktopNav />
-        </Box>
-
-        <Box display={['block', 'block', 'none']}>
+        <Box>
           <IconButton
             aria-label="Abrir menu"
             onClick={onToggle}

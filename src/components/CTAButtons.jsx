@@ -4,7 +4,7 @@ import { HStack, Button } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export default function CTAButtons({
-  whatsappHref = 'https://wa.me/5527999999999',
+  whatsappHref = 'https://wa.me/5527998558425',
   instagramHref = 'https://instagram.com/nidus.code',
 }) {
   return (

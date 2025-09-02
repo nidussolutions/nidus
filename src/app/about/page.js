@@ -109,9 +109,14 @@ export default function AboutPage() {
             </GridItem>
           </Grid>
 
-          <Box borderBottom="1px solid" borderColor="whiteAlpha.300" my={6} />
+          <Box
+            borderBottom="1px solid"
+            borderColor="whiteAlpha.300"
+            my={6}
+            mt={-6}
+          />
 
-          <VStack spacing={5} align="stretch" pb={6} mt={-8}>
+          <VStack spacing={5} align="stretch" pb={6}>
             <Text
               fontSize={{ base: 'md', md: 'lg' }}
               color="whiteAlpha.800"

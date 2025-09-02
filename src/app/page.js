@@ -1,6 +1,7 @@
 'use client';
 
-import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import { Flex, Heading, Text, VStack, Link, Icon } from '@chakra-ui/react';
+import { FaInstagram } from 'react-icons/fa';
 
 export default function NidusPage() {
   return (
@@ -9,8 +10,11 @@ export default function NidusPage() {
       align="center"
       justify="center"
       bgGradient="linear(to-br, pink.500, purple.700, cyan.500)"
+      direction="column"
+      textAlign="center"
+      p={6}
     >
-      <VStack spacing={6} textAlign="center">
+      <VStack spacing={6}>
         <Heading
           size="4xl"
           fontWeight="extrabold"
@@ -19,6 +23,7 @@ export default function NidusPage() {
         >
           NIDUS
         </Heading>
+
         <Text
           fontSize="xl"
           color="whiteAlpha.900"
@@ -28,6 +33,20 @@ export default function NidusPage() {
           Está para nascer o berço de novas ideias. O nascimento de um espaço
           para criar, inovar e transformar.
         </Text>
+
+        <Link
+          href="https://instagram.com/nidus.code"
+          target="_blank"
+          fontSize="lg"
+          fontWeight="bold"
+          color="white"
+          _hover={{ textDecoration: 'none', color: 'pink.300' }}
+          display="flex"
+          alignItems="center"
+          gap={2}
+        >
+          @nidus.code
+        </Link>
       </VStack>
     </Flex>
   );

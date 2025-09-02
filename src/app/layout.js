@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { Provider } from '@/components/ui/provider';
 import './globals.css';
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="ptbr" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>{children}</Provider>
+        <Analytics />
       </body>
     </html>
   );

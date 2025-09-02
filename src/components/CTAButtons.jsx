@@ -1,6 +1,6 @@
 'use client';
 
-import { HStack, Button } from '@chakra-ui/react';
+import { Stack, Button } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export default function CTAButtons({
@@ -8,7 +8,13 @@ export default function CTAButtons({
   instagramHref = 'https://instagram.com/nidus.code',
 }) {
   return (
-    <HStack spacing={{ base: 3, md: 4 }} pt={5}>
+    <Stack
+      spacing={{ base: 3, md: 4 }}
+      pt={5}
+      direction={{ base: 'column', md: 'row' }}
+      align="center"
+      justify="center"
+    >
       <Button
         as={Link}
         href={whatsappHref}
@@ -43,6 +49,6 @@ export default function CTAButtons({
       >
         Acesse o Instagram
       </Button>
-    </HStack>
+    </Stack>
   );
 }

@@ -100,7 +100,7 @@ export default function Header() {
       <Stack direction="row" align="center" justify="space-between">
         <Logo />
 
-        <Box display={['none', 'none', 'block']}>
+        <Box>
           <DesktopNav />
         </Box>
       </Stack>

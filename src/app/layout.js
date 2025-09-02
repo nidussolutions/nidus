@@ -1,17 +1,7 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { Provider } from '@/components/ui/provider';
-import './globals.css';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import Article from '@/components/Article';
 
 export const metadata = {
   title: 'NIDUS | O Berço da Inovação',
@@ -21,8 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ptbr" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Provider>{children}</Provider>
+      <body>
+        <Provider>
+          <Article>{children}</Article>
+        </Provider>
         <Analytics />
       </body>
     </html>

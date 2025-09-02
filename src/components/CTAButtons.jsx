@@ -6,6 +6,7 @@ import Link from 'next/link';
 export default function CTAButtons({
   whatsappHref = 'https://wa.me/5527998558425',
   instagramHref = 'https://instagram.com/nidus.code',
+  mailtoHref = 'mailto:contato@nidussolutions.com',
 }) {
   return (
     <Stack
@@ -17,7 +18,7 @@ export default function CTAButtons({
     >
       <Button
         as={Link}
-        href={whatsappHref}
+        href={mailtoHref}
         target="_blank"
         size="lg"
         rounded="full"

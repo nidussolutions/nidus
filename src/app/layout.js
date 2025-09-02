@@ -1,5 +1,6 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Provider } from '@/components/ui/provider';
 import Article from '@/components/Article';
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Article>{children}</Article>
         </Provider>
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>

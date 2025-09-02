@@ -11,6 +11,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ptbr" suppressHydrationWarning>
+      <head>
+        <link
+          rel="icon"
+          href="/logo-light.png"
+          type="image/png"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/logo-dark.png"
+          type="image/png"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body>
         <Provider>
           <Article>{children}</Article>

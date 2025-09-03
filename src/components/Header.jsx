@@ -1,6 +1,5 @@
 'use client';
 
-import { useMemo } from 'react';
 import Link from 'next/link';
 import {
   Box,
@@ -18,6 +17,7 @@ import { usePathname } from 'next/navigation';
 const NAV_ITEMS = [
   { label: 'Início', href: '/' },
   { label: 'Sobre', href: '/about' },
+  { label: 'Works', href: '/work' },
 ];
 
 const LOGO_DARK = '/logo-dark.png';

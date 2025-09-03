@@ -11,7 +11,7 @@ const system = createSystem(
       tokens: {
         fonts: {
           heading: { value: 'edosz, system-ui, sans-serif' },
-          body: { value: 'edosz, system-ui, sans-serif' },
+          body: { value: 'montserrat, system-ui, sans-serif' },
         },
       },
     },

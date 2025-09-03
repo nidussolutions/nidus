@@ -10,7 +10,7 @@ export default function Logo(props) {
       mt={-4}
       src={LOGO_DARK}
       alt="NIDUS"
-      boxSize={['200px', '250px', '400px']}
+      boxSize={{ base: '250px', md: '350px' }}
       {...props}
     />
   );

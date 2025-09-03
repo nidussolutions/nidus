@@ -1,15 +1,10 @@
 import Main from '@/components/Main';
-import Logo from '@/components/Logo';
-import {
-  Box,
-  Grid,
-  GridItem,
-  Stack,
-  Heading,
-  Text,
-  HStack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Stack, Heading } from '@chakra-ui/react';
+
+import TextAbout from '@/components/about/TextAbout';
+import HeaderAbout from '@/components/about/HeaderAbout';
+import Divider from '@/components/Divider';
+import Card from '@/components/about/Card';
 
 export default function AboutPage() {
   return (
@@ -32,14 +27,14 @@ export default function AboutPage() {
         }}
         borderWidth="1px"
         borderColor="whiteAlpha.200"
-        rounded={{ base: 'none', md: '3xl' }}
+        rounded={{ base: '2xl', md: '3xl' }}
       >
         <Stack spacing={{ base: 8, md: 12 }} position="relative">
           <Heading
             as="h1"
             lineHeight="1.15"
             letterSpacing={{ base: '0.18em', md: '0.22em' }}
-            fontSize={{ base: '1.1rem', md: '2.8rem' }}
+            fontSize={{ base: '1.5rem', md: '2.8rem' }}
             fontFamily="edosz"
             textTransform="uppercase"
             bgClip="text"
@@ -51,151 +46,54 @@ export default function AboutPage() {
             Sobre a Nidus
           </Heading>
 
-          <Grid
-            templateColumns={{ base: '1fr', md: '350px 1fr' }}
-            gap={{ base: 6, md: 10 }}
-            alignItems="center"
-          >
-            <GridItem>
-              <Logo />
-            </GridItem>
+          <HeaderAbout />
 
-            <GridItem>
-              <VStack spacing={2} align="start">
-                <Text
-                  maxW="2xl"
-                  fontSize={{ base: 'lg', md: 'xl' }}
-                  color="whiteAlpha.900"
-                >
-                  Nascemos no limiar entre o{' '}
-                  <Box as="span" color="purple.300" fontWeight="semibold">
-                    experimental
-                  </Box>{' '}
-                  e o{' '}
-                  <Box as="span" color="cyan.300" fontWeight="semibold">
-                    funcional
-                  </Box>
-                  : um estúdio que transforma ideias cruas em soluções digitais
-                  tangíveis.
-                </Text>
-                <Text
-                  maxW="2xl"
-                  fontSize={{ base: 'lg', md: 'xl' }}
-                  color="whiteAlpha.900"
-                >
-                  Da criação de{' '}
-                  <Box as="span" color="cyan.300" fontWeight="semibold">
-                    sites e sistemas sob medida
-                  </Box>{' '}
-                  à{' '}
-                  <Box as="span" color="purple.300" fontWeight="semibold">
-                    automação de processos
-                  </Box>{' '}
-                  e{' '}
-                  <Box as="span" color="cyan.300" fontWeight="semibold">
-                    integrações cloud
-                  </Box>
-                  , entregamos tecnologia que acelera crescimento com{' '}
-                  <Box as="span" color="purple.300" fontWeight="semibold">
-                    menos fricção
-                  </Box>{' '}
-                  e{' '}
-                  <Box as="span" color="cyan.300" fontWeight="semibold">
-                    mais resultado
-                  </Box>
-                  .
-                </Text>
-              </VStack>
-            </GridItem>
-          </Grid>
+          <Divider my={{ base: 2, md: 6 }} mt={{ base: 1, md: -6 }} />
 
-          <Box
-            borderBottom="1px solid"
-            borderColor="whiteAlpha.300"
-            my={6}
-            mt={-6}
-          />
+          <TextAbout />
 
-          <VStack spacing={5} align="stretch" pb={6}>
-            <Text
-              fontSize={{ base: 'md', md: 'lg' }}
-              color="whiteAlpha.800"
-              textAlign="justify"
+          <Divider my={{ base: 2, md: 6 }} mt={{ base: -3, md: -6 }} />
+
+          <Stack spacing={{ base: 6, md: 10 }} mb={8}>
+            <Heading
+              as="h2"
+              fontSize={{ base: '1.25rem', md: '2xl' }}
+              fontFamily="edosz"
+              letterSpacing="0.12em"
+              textTransform="uppercase"
+              color="whiteAlpha.900"
+              textAlign="center"
+              mb={4}
             >
-              A Nidus opera com uma filosofia simples:{' '}
-              <Box as="span" color="cyan.300" fontWeight="semibold">
-                construir o essencial muito bem
-              </Box>
-              . Mantemos a estética{' '}
-              <Box as="span" color="purple.300" fontWeight="semibold">
-                minimalista e underground
-              </Box>{' '}
-              porque performance e clareza importam. Cada projeto nasce de um
-              diagnóstico direto, sem rodeios: mapeamos o problema, definimos a
-              estratégia e executamos em ciclos rápidos, sempre medindo impacto
-              e aprendendo com dados reais.
-            </Text>
+              Quem está à frente da NIDUS?
+            </Heading>
 
-            <Text
-              fontSize={{ base: 'md', md: 'lg' }}
-              color="whiteAlpha.800"
-              textAlign="justify"
+            <Stack
+              justify="center"
+              direction={{ base: 'column', md: 'row' }}
+              gap={{ base: 0, md: 8 }}
+              px={{ base: 4, md: 0 }}
             >
-              Nossa missão é{' '}
-              <Box as="span" color="cyan.300" fontWeight="semibold">
-                entregar tecnologia que simplifica, conecta e escala
-              </Box>
-              . Isso significa arquitetura bem pensada, padrões sólidos, e
-              integração limpa com o que você já usa. É comum chegarmos onde
-              outros pararam: APIs difíceis, infra desorganizada, código sem
-              dono. Nós entramos, organizamos e{' '}
-              <Box as="span" color="purple.300" fontWeight="semibold">
-                colocamos para rodar em produção
-              </Box>
-              .
-            </Text>
+              <Card
+                name="João Gustavo Bispo"
+                role="Fundador e Desenvolvedor"
+                description={`Com 25 anos, João iniciou sua trajetória no setor público aos 19. Desde os 17 integra a Ordem DeMolay, onde exerceu funções de liderança e hoje atua como sênior, reforçando valores de disciplina e compromisso social. Cofundador da Nidus, carrega a visão de unir desenvolvimento, design e estratégia para criar soluções digitais autênticas, apostando em uma estética underground e vibrante, que foge do minimalismo frio e sem vida.`}
+                image="https://avatars.githubusercontent.com/u/189302553?v=4"
+                github="https://github.com/jgbiispo"
+                instagram="https://www.instagram.com/jgbiispo"
+                quote={`Liderar é transformar ideias em caminhos reais, onde criatividade e propósito andam juntos.`}
+              />
 
-            <Text
-              fontSize={{ base: 'md', md: 'lg' }}
-              color="whiteAlpha.800"
-              textAlign="justify"
-            >
-              Operamos como parceiros, não como fornecedores. Transparência em
-              cada entrega, comunicação objetiva e metas compartilhadas. Nosso
-              foco é a sua curva de resultado — menos slides, mais{' '}
-              <Box as="span" color="cyan.300" fontWeight="semibold">
-                deploy
-              </Box>
-              . Quando é preciso inovar, fazemos com propósito: testar rápido,
-              reduzir risco e{' '}
-              <Box as="span" color="purple.300" fontWeight="semibold">
-                aprender no curto prazo
-              </Box>{' '}
-              para ganhar no longo.
-            </Text>
-
-            <Text
-              fontSize={{ base: 'md', md: 'lg' }}
-              color="whiteAlpha.800"
-              textAlign="justify"
-            >
-              A Nidus é a intersecção entre{' '}
-              <Box as="span" color="cyan.300" fontWeight="semibold">
-                design, engenharia e automação
-              </Box>
-              . Nosso ambiente é de laboratório — silencioso, técnico, focado —
-              onde ideias são refinadas até virarem sistemas{' '}
-              <Box as="span" color="purple.300" fontWeight="semibold">
-                modernos e escaláveis
-              </Box>
-              . Se a sua empresa precisa crescer com consistência, nós somos o
-              time que constrói esse caminho, do{' '}
-              <Box as="span" color="cyan.300" fontWeight="semibold">
-                conceito ao deploy
-              </Box>
-              .
-            </Text>
-          </VStack>
+              <Card
+                name="Thiago Viana"
+                role="Fundador e Social Media"
+                description={`Aos 24 anos, Thiago construiu uma jornada marcada pela criatividade e pelo engajamento social. Sempre ligado ao desenho, à música e à tecnologia, encontrou nessas áreas um meio de expressão que se reflete em sua atuação profissional. Com experiência em vendas e comunicação, uniu forças com João para fundar a Nidus, trazendo consigo a visão de que tecnologia e design devem ser próximos das pessoas: vivos, autênticos e capazes de gerar impacto real para pequenos negócios.`}
+                image="/thiago.png"
+                instagram="https://www.instagram.com/thiagovc01"
+                quote={`A comunicação verdadeira nasce quando tecnologia e pessoas se encontram de forma autêntica.`}
+              />
+            </Stack>
+          </Stack>
         </Stack>
       </Box>
     </Main>

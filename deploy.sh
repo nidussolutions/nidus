@@ -53,10 +53,8 @@ command -v pnpm >/dev/null || { c_err "pnpm não encontrado"; exit 127; }
 command -v pm2  >/dev/null || { c_err "pm2 não encontrado"; exit 127; }
 
 # 1) Atualiza código
-current_branch="$(git rev-parse --abbrev-ref HEAD)"
-c_info "Atualizando branch $current_branch…"
-git fetch >> "$LOG_FILE" 2>&1
-git pull --ff-only origin "$current_branch" >> "$LOG_FILE" 2>&1
+c_info "Atualizando branch main…"
+git pull --ff-only origin main >> "$LOG_FILE" 2>&1
 c_ok "Código atualizado."
 
 # 2) Instala dependências determinísticas

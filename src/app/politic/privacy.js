@@ -1,3 +1,5 @@
+'use client';
+
 import Main from '@/components/Main';
 import {
   Box,
@@ -10,7 +12,48 @@ import {
   Divider,
 } from '@chakra-ui/react';
 
-export default function WorkPage() {
+function Section({ id, title, children, pb = 6 }) {
+  return (
+    <Box
+      id={id}
+      borderWidth="1px"
+      borderColor="whiteAlpha.200"
+      rounded="xl"
+      p={{ base: 4, md: 6 }}
+      bg="blackAlpha.300"
+      mb={6}
+      pb={pb}
+    >
+      <Heading as="h2" size="md" color="whiteAlpha.900" mb={2}>
+        {title}
+      </Heading>
+      <Stack spacing={3} color="whiteAlpha.900">
+        {children}
+      </Stack>
+    </Box>
+  );
+}
+
+function Kpi({ title, text }) {
+  return (
+    <Box
+      flex="1"
+      minW={{ base: '100%', md: '240px' }}
+      borderWidth="1px"
+      borderColor="whiteAlpha.200"
+      rounded="xl"
+      p={{ base: 4, md: 6 }}
+      bg="blackAlpha.300"
+    >
+      <Heading as="h3" size="sm" color="whiteAlpha.900" mb={2}>
+        {title}
+      </Heading>
+      <Text color="whiteAlpha.900">{text}</Text>
+    </Box>
+  );
+}
+
+export default function PrivacyPage() {
   const lastUpdate = '22/09/2025';
 
   return (
@@ -247,11 +290,7 @@ export default function WorkPage() {
         </Section>
 
         <Divider my={6} borderColor="whiteAlpha.300" />
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          spacing={4}
-          color="whiteAlpha.900"
-        >
+        <Stack direction={{ base: 'column', md: 'row' }} spacing={4} color="whiteAlpha.900">
           <Kpi title="Controladora" text="Procon/ES" />
           <Kpi title="Base legal principal" text="Execução de contrato, legítimo interesse, obrigação legal e consentimento quando necessário." />
           <Kpi title="Canais" text="WhatsApp Business, Web, integrações (webhook/n8n)." />
@@ -262,57 +301,5 @@ export default function WorkPage() {
         </Text>
       </Box>
     </Main>
-  );
-}
-
-/* ----------------- Helpers ----------------- */
-
-type SectionProps = {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-  pb?: number | string;
-};
-
-function Section({ id, title, children, pb = 6 }: SectionProps) {
-  return (
-    <Box
-      id={id}
-      borderWidth="1px"
-      borderColor="whiteAlpha.200"
-      rounded="xl"
-      p={{ base: 4, md: 6 }}
-      bg="blackAlpha.300"
-      mb={6}
-      pb={pb}
-    >
-      <Heading as="h2" size="md" color="whiteAlpha.900" mb={2}>
-        {title}
-      </Heading>
-      <Stack spacing={3} color="whiteAlpha.900">
-        {children}
-      </Stack>
-    </Box>
-  );
-}
-
-type KpiProps = { title: string; text: string };
-
-function Kpi({ title, text }: KpiProps) {
-  return (
-    <Box
-      flex="1"
-      minW={{ base: '100%', md: '240px' }}
-      borderWidth="1px"
-      borderColor="whiteAlpha.200"
-      rounded="xl"
-      p={{ base: 4, md: 6 }}
-      bg="blackAlpha.300"
-    >
-      <Heading as="h3" size="sm" color="whiteAlpha.900" mb={2}>
-        {title}
-      </Heading>
-      <Text color="whiteAlpha.900">{text}</Text>
-    </Box>
   );
 }
